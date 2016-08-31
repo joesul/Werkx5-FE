@@ -17,7 +17,7 @@ class JobsListed extends Component {
   }
 
   render() {
-    const jobsListed
+
     return (
       <div className="jobs-listed-wrapper">
         <button>View Jobs Listed</button>
