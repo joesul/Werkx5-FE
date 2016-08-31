@@ -7,10 +7,20 @@ class JobsListed extends Component {
   //   super(props);
   //   }
 
+  handJobsListed() {
+    Helper.all().then((res) => {
+      this.setState({
+        response: res.data
+      });
+        console.log(res.data);
+    });
+  }
 
   render() {
+    const jobsListed
     return (
       <div className="jobs-listed-wrapper">
+        <button>View Jobs Listed</button>
       </div>
     );
   }

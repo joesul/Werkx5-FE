@@ -1,17 +1,25 @@
 import axios from 'axios';
 
 export default {
-  name: function(unicorn){
-    return axios.get('http://localhost:3000/unicorns/' + unicorn);
+
+  zipcode: function(zipcode){
+    console.log("helper by zipcode", zipcode);
+    return axios.get('http://localhost:3000/jobs/' + zipcode);
   },
 
-  all: function(){
-    return axios.get('http://localhost:3000/unicorns/');
+  listed: function(uid) {
+    console.log("uid", uid);
+    return axios.get('http://localhost:3000/jobs/' + uid);
   },
 
-  add: function(unicorn) {
-    console.log(unicorn);
-    return axios.post('http://localhost:3000/unicorns/new', unicorn);
+  all: function() {
+    console.log("helper view all");
+    return axios.get('http://localhost:3000/jobs/');
+  },
+
+  add: function(job) {
+    console.log("helper", job);
+    return axios.post('http://localhost:3000/jobs/new', job);
   },
 
   delete: function(unicorn) {

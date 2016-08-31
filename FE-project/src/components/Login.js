@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router';
+import { browserHistory } from 'react-router';
 import firebaseUtils from '../utils/FirebaseUtils';
 import '../stylesheets/Login.css';
 
@@ -19,7 +19,8 @@ class Login extends Component {
 
   logIn(event, email, password) {
     firebaseUtils.SignIn(this.state.email, this.state.password)
-    console.log("User has logged in!");
+      console.log("User has logged in!");
+      browserHistory.push("/profile");
   }
 
   render() {
