@@ -25,13 +25,13 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="login-wrapper">
-        <div>
+      <div className="font-effect-wallpaper">
+        <div className="list">
           <h2>Login</h2>
           <ul>
-            <li>Email: <input onChange={(e) => this.setState({email: e.target.value})}/></li>
-            <li>Password: <input type="password" onChange={(e) => this.setState({password: e.target.value})}/></li>
-            <button onClick={(event) => this.logIn(event)}>Submit</button>
+            Email: <li><input onChange={(e) => this.setState({email: e.target.value})}/></li>
+            Password:<li> <input type="password" onChange={(e) => this.setState({password: e.target.value})}/></li>
+          <button className="myButton" onClick={(event) => this.logIn(event)}>Submit</button>
           </ul>
         </div>
       </div>

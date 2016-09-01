@@ -5,7 +5,7 @@ import '../stylesheets/images.css'
 class Image extends Component{
   render(){
     return(
-       <img className="font-effect-fire-animation"src={logo}/>
+       <img src={logo}/>
     )
   }
 }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Image from './Image'
 import LoginBtn from '../components/LoginBtn';
-import Video from './Video'
 import '../stylesheets/App.css';
 
 
@@ -16,14 +15,13 @@ class App extends Component {
           <Image />
           <div className="navi">
            <Link to="/"><h4 className="font-effect-wallpaper">Home</h4></Link><br/>
-           <h4 className="font-effect-wallpaper"><Link to="/signup">Sign Up</Link></h4>
-           <LoginBtn />
+           <Link to="/signup"><h4 className="font-effect-wallpaper">Sign Up</h4></Link>
+           <Link to="/login"><h4 className="font-effect-wallpaper">Log In</h4></Link>
           </div>
         </header>
        <div>
         {this.props.children}
        </div>
-        {/*<Video />*/}
       </div>
     );
   }

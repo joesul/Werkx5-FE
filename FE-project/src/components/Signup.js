@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router';
 import firebaseUtils from '../utils/FirebaseUtils';
+import Video from './Video'
 import '../stylesheets/Signup.css';
 
 class Signup extends Component {
@@ -39,10 +40,14 @@ class Signup extends Component {
            First Name:<li> <input onChange={e => this.setState({firstName: e.target.value})}/></li>
            Last Name: <li><input onChange={e => this.setState({lastName: e.target.value})}/></li>
            Phone Number: <li><input onChange={e => this.setState({phone: e.target.value})}/></li>
+         <button className="signUp" onClick={(event) => this.makeUser(event)}>Lets Make Me!</button>
            </ul>
-        <button onClick={(event) => this.makeUser(event)}>Lets Make Me!</button>
+
         </div>
+
         </div>
+
+
     )
   }
 }

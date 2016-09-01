@@ -17,6 +17,7 @@ header{
 }
 h4{
   font-family: 'Nova Round';
+  text-decoration: none;
 }
 h1{
   font-size: 80px;
