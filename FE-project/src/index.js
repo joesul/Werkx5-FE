@@ -7,6 +7,7 @@ import Profile from './components/Profile';
 import Signup from './components/Signup';
 import JobsTaken from './components/JobsTaken';
 import JobsListed from './components/JobsListed';
+import EditJob from './components/EditJob';
 import CreateJobs from './components/CreateJobs';
 import SearchJobs from './components/SearchJobs';
 import './stylesheets/index.css';
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path="/signup" component={Signup} />
       <Route path="/jobstaken" component={JobsTaken} />
       <Route path="/jobslisted" component={JobsListed} />
+      <Route path="/jobslisted/edit" component={EditJob} />
       <Route path="/createjobs" component={CreateJobs} />
       <Route path="/searchjobs" component={SearchJobs} />
     </Route>

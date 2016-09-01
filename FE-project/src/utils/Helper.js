@@ -30,16 +30,27 @@ export default {
 
   work: function(user) {
     console.log("helper work", user);
-    return axios.get('http://localhost:3000/jobs/work' + user);
+    return axios.get('http://localhost:3000/jobs/work/' + user);
   },
 
-  delete: function(unicorn) {
-    console.log(unicorn);
-    return axios.delete('http://localhost:3000/unicorns/' + unicorn);
+  delete: function(jobId, data) {
+    console.log("helper take job by ID", data.id);
+    console.log("helper take job with userID", data.username)
+    return axios.delete('http://localhost:3000/jobs/' + jobId);
   },
 
-  update: function(unicorn) {
-    console.log(unicorn.name);
-    return axios.put('http://localhost:3000/unicorns/' + unicorn.name, unicorn)
+  update: function(jobId) {
+    console.log("helper update", jobId);
+    return axios.put('http://localhost:3000/jobs/status/' + jobId)
+  },
+
+  grab: function(jobId) {
+    console.log("helper grab", jobId);
+    return axios.get('http://localhost:3000/jobs/forupdate/' + jobId)
+  },
+
+  edit: function(data) {
+    console.log("helper", data);
+    return axios.put('http://localhost:3000/jobs/edit/' + data.id, data)
   }
 }

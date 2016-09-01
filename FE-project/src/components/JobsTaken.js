@@ -10,6 +10,7 @@ class JobsTaken extends Component {
     super(props);
     this.state = {
       username: uid,
+      job_status: "",
       response: []
     }
   }
@@ -21,18 +22,27 @@ class JobsTaken extends Component {
       this.setState({
         response: res.data
       });
-        console.log(res.data);
     });
   }
+
+  handleJobFinished(event, jobId) {
+    Helper.update(jobId).then((res) => {
+      this.setState({
+        response: res.data
+      })
+    });
+  }
+
   render() {
     const jobs = this.state.response;
+    let jobsList = this;
 
     return (
       <div className="jobs-taken-wrapper">
         <button onClick={(event) => this.handleWorkList(event)}>View Work List</button>
         <ul>
           {jobs.map(function(jobs, index){
-            return <li key={index}>Job Name: {jobs.job_name}, Offer: ${jobs.offer}, Description {jobs.description}</li>
+            return <li key={index}>Job Name: {jobs.job_name}, Offer: ${jobs.offer}, Description: {jobs.description}, Job Status:  {!jobs.job_status ? "Ongoing" : jobs.job_status} <button onClick={(event) => jobsList.handleJobFinished(event, jobs.id)}>Job Finished</button></li>
           })}
         </ul>
       </div>
