@@ -16,7 +16,7 @@ class App extends Component {
           <img src={logo} />
           <div className="navi">
           <Link to="/">Home</Link><br/>
-          <Link className="signup" to="/signup">Sign Up</Link>
+          <Link to="/signup">Sign Up</Link>
           <LoginBtn/>
           {this.props.children}
         </div>

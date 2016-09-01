@@ -32,5 +32,6 @@ img{
   width: 400px;
 }
 .vid{
-  margin-left: 100px
+  margin-left: 100px;
+  z-index: -3;
 }
