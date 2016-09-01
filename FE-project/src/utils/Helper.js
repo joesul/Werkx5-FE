@@ -3,13 +3,13 @@ import axios from 'axios';
 export default {
 
   zipcode: function(zipcode){
-    console.log("helper by zipcode", zipcode);
+    console.log("search by zipcode", zipcode);
     return axios.get('http://localhost:3000/jobs/' + zipcode);
   },
 
   listed: function(uid) {
-    console.log("uid", uid);
-    return axios.get('http://localhost:3000/jobs/' + uid);
+    console.log("search by uid", uid);
+    return axios.get('http://localhost:3000/jobs/list/' + uid);
   },
 
   all: function() {

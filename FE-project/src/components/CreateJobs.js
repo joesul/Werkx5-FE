@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import Helper from '../utils/Helper';
 import '../stylesheets/JobsListed.css';
 
-let me = localStorage.getItem('uid')
+let uid = localStorage.getItem('uid')
 
 class CreateJobs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: me,
+      username: uid,
       job_name: "",
       zip: "",
       offer: "",

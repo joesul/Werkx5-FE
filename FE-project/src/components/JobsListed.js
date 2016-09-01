@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router';
+import Helper from '../utils/Helper';
 import '../stylesheets/JobsListed.css';
 
-class JobsListed extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   }
+let uid = localStorage.getItem('uid')
 
-  handJobsListed() {
-    Helper.all().then((res) => {
+class JobsListed extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: uid,
+    }
+  }
+
+  handJobsListed(event) {
+    let user = this.state.username
+    console.log(user);
+    Helper.listed(user).then((res) => {
       this.setState({
         response: res.data
       });
@@ -17,10 +25,9 @@ class JobsListed extends Component {
   }
 
   render() {
-    const jobsListed
     return (
       <div className="jobs-listed-wrapper">
-        <button>View Jobs Listed</button>
+        <button onClick={(event) => this.handJobsListed(event)}>View Jobs Listed</button>
       </div>
     );
   }

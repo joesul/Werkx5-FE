@@ -4,12 +4,6 @@ import '../stylesheets/Profile.css';
 
 class Profile extends Component {
 
-  componentDidMount() {
-    let userID = localStorage.getItem("uid");
-    console.log(userID);
-  }
-
-
   render() {
     return (
       <div className="profile-wrapper">
