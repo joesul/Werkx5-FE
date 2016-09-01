@@ -18,8 +18,19 @@ export default {
   },
 
   add: function(job) {
-    console.log("helper", job);
+    console.log("helper add job", job);
     return axios.post('http://localhost:3000/jobs/new', job);
+  },
+
+  take: function(jobId, data) {
+    console.log("helper take job by ID", data.id);
+    console.log("helper take job with userID", data.username)
+    return axios.put('http://localhost:3000/jobs/take/' + data.id, data)
+  },
+
+  work: function(user) {
+    console.log("helper work", user);
+    return axios.get('http://localhost:3000/jobs/work' + user);
   },
 
   delete: function(unicorn) {

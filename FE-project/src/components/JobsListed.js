@@ -10,10 +10,11 @@ class JobsListed extends Component {
     super(props);
     this.state = {
       username: uid,
+      response: []
     }
   }
 
-  handJobsListed(event) {
+  handleJobsListed(event) {
     let user = this.state.username
     console.log(user);
     Helper.listed(user).then((res) => {
@@ -25,9 +26,16 @@ class JobsListed extends Component {
   }
 
   render() {
+    const jobs = this.state.response;
+
     return (
       <div className="jobs-listed-wrapper">
-        <button onClick={(event) => this.handJobsListed(event)}>View Jobs Listed</button>
+        <button onClick={(event) => this.handleJobsListed(event)}>View Jobs Listed</button>
+        <ul>
+          {jobs.map(function(jobs, index){
+            return <li key={index}>Job Name: {jobs.job_name}, Offer: ${jobs.offer}, Description {jobs.description}</li>
+          })}
+        </ul>
       </div>
     );
   }
