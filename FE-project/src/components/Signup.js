@@ -40,7 +40,7 @@ class Signup extends Component {
            First Name:<li> <input onChange={e => this.setState({firstName: e.target.value})}/></li>
            Last Name: <li><input onChange={e => this.setState({lastName: e.target.value})}/></li>
            Phone Number: <li><input onChange={e => this.setState({phone: e.target.value})}/></li>
-         <button className="signUp" onClick={(event) => this.makeUser(event)}>Lets Make Me!</button>
+         <button className="signUp" onClick={(event) => this.makeUser(event)}>Join WERKX5</button>
            </ul>
 
         </div>

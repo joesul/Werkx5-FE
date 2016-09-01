@@ -1,0 +1,38 @@
+.createTask{
+  font-family: Nova Round;
+  display: flex;
+  justify-content: center;
+  margin-left: -200px;
+}
+.font-effect-wallpaper{
+  align-self: center;
+}
+.createList{
+  align-self: center;
+}
+.text{
+  height: 150px;
+  width: 300px;
+}
+.cJob {
+	background-color:transparent;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #7FB832;
+	display:inline-block;
+	cursor:pointer;
+	color:#7FB832;
+	font-family:Trebuchet MS;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.cJob:hover {
+	background-color:transparent;
+}
+.cJob:active {
+	position:relative;
+	top:1px;
+}

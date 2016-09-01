@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router';
 import Helper from '../utils/Helper';
-import '../stylesheets/JobsListed.css';
+import '../stylesheets/CreateJobs.css';
 
 let uid = localStorage.getItem('uid')
 
@@ -31,17 +31,19 @@ class CreateJobs extends Component {
 
   render() {
     return (
-      <div className="create-jobs-wrapper">
-        <form onSubmit={(event) => this.createJob(event)}>
-          Create Job<br/>
-          Job Name: <input onChange={(event) => this.setState({job_name: event.target.value})}/><br/>
-          Offer: <input onChange={(event) => this.setState({offer: event.target.value})}/><br/>
-          Zip Code: <input onChange={(event) => this.setState({zip: event.target.value})}/><br/>
-          Description: <textarea onChange={(event) => this.setState({description: event.target.value})}/><br/>
-        <button type="submit">Create</button><br/>
+
+        <form className="createTask" onSubmit={(event) => this.createJob(event)}>
+          <h2 className='font-effect-wallpaper'>Create Job</h2>
+        <ul className="createList">
+          Job Name: <li><input onChange={(event) => this.setState({job_name: event.target.value})}/></li>
+          Offer: <li><input onChange={(event) => this.setState({offer: event.target.value})}/></li>
+          Zip Code: <li><input onChange={(event) => this.setState({zip: event.target.value})}/></li>
+        Description: <li><textarea className="text" onChange={(event) => this.setState({description: event.target.value})}/></li>
+      <button className="cJob" type="submit">Create</button>
         <div>{this.state.message}</div>
+        </ul>
         </form>
-      </div>
+
     );
   }
 }

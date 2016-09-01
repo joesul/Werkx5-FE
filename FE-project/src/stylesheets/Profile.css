@@ -1,0 +1,8 @@
+.profile-wrapper{
+  font-family: 'Nova Mono';
+  display: flex;
+  justify-content: center;
+}
+.profile{
+  font-family: 'Nova Mono';
+}
