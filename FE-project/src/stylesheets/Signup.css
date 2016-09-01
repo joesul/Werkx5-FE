@@ -1,0 +1,10 @@
+.signUpForm{
+  margin-top: 0px;
+  display: flex;
+  margin-left: 460px;
+  align-content: space-around;
+}
+
+.form{
+  align-self: flex-end;
+}

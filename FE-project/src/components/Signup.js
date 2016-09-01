@@ -29,17 +29,19 @@ class Signup extends Component {
 
   render() {
     return (
-      <div>
-        <h1>SIGN UP</h1>
-        <ul>
-          <li> Email: <input onChange={e => this.setState({email: e.target.value})}/> </li>
-          <li> Password: <input onChange={e => this.setState({password: e.target.value})}/> </li>
-          <li> Username: <input onChange={e => this.setState({userName: e.target.value})}/> </li>
-          <li> First Name: <input onChange={e => this.setState({firstName: e.target.value})}/></li>
-          <li> Last Name: <input onChange={e => this.setState({lastName: e.target.value})}/></li>
-          <li> Phone Number: <input onChange={e => this.setState({phone: e.target.value})}/></li>
-        </ul>
+      <div className="signUpForm">
+        <div className="form">
+          <ul className="list">
+            <li><h3>Sign Up</h3></li>
+          Email: <li><input onChange={e => this.setState({email: e.target.value})}/></li>
+           Password: <li><input onChange={e => this.setState({password: e.target.value})}/></li>
+           Username: <li><input onChange={e => this.setState({userName: e.target.value})}/></li>
+           First Name:<li> <input onChange={e => this.setState({firstName: e.target.value})}/></li>
+           Last Name: <li><input onChange={e => this.setState({lastName: e.target.value})}/></li>
+           Phone Number: <li><input onChange={e => this.setState({phone: e.target.value})}/></li>
+           </ul>
         <button onClick={(event) => this.makeUser(event)}>Lets Make Me!</button>
+        </div>
         </div>
     )
   }
