@@ -31,7 +31,7 @@ class Signup extends Component {
   render() {
     return (
       <div className="signUpForm">
-        <div className="form">
+        <div className="font-effect-wallpaper">
           <ul className="list">
             <li><h3>Sign Up</h3></li>
           Email: <li><input onChange={e => this.setState({email: e.target.value})}/></li>
