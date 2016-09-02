@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router';
 import Helper from '../utils/Helper';
+import Video from './Video'
 import '../stylesheets/CreateJobs.css';
 
 let uid = localStorage.getItem('uid')
@@ -31,7 +32,7 @@ class CreateJobs extends Component {
 
   render() {
     return (
-
+      <div>
         <form className="createTask" onSubmit={(event) => this.createJob(event)}>
           <h2 className='font-effect-wallpaper'>Create Job</h2>
         <ul className="createList">
@@ -44,6 +45,8 @@ class CreateJobs extends Component {
         </ul>
         </form>
 
+        <Video />
+        </div>
     );
   }
 }
