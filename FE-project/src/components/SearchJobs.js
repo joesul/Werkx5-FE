@@ -64,7 +64,8 @@ class SearchJobs extends Component {
               <li><h3>Job Name: {jobs.job_name}</h3></li>
             <li><h3>Offer: ${jobs.offer}</h3></li>
           <li><h3>Description: {jobs.description}</h3></li>
-        <li><h3>Zipcode: {jobs.zip}</h3></li> <button className="sJobs" onClick={(event) => jobsList.handleTakeJob(event, jobs.id)}>Take Job</button></li>
+        <li><h3>Zipcode: {jobs.zip}</h3></li>
+          <button className="sJobs" onClick={(event) => jobsList.handleTakeJob(event, jobs.id)}>Take Job</button></li>
           })}
         </ul>
       </div>
