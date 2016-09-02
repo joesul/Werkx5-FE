@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router';
 import Helper from '../utils/Helper';
-import '../stylesheets/JobsListed.css';
+import '../stylesheets/SearchJobs.css';
 
 let uid = localStorage.getItem('uid')
 
@@ -55,12 +55,16 @@ class SearchJobs extends Component {
     let jobsList = this;
     return (
       <div className="search-jobs-wrapper">
-        <button onClick={(event) => this.handleViewAll(event)}>View all Jobs</button><br/>
-        Search by Zip Code: <input onChange={event => this.setState({zip: event.target.value})}/><br/>
-        <button onClick={(event) => this.handleSearchByZip(event)}>Search</button>
+        <h2>Search by Zip Code: <input onChange={event => this.setState({zip: event.target.value})}/></h2><br/>
+      <button className="sJobs" onClick={(event) => this.handleSearchByZip(event)}>Search</button>
+        <button className="sJobs" onClick={(event) => this.handleViewAll(event)}>View all Jobs</button><br/>
         <ul>
           {jobs.map(function(jobs, index){
-            return <li key={index}>Job Name: {jobs.job_name}, Offer: ${jobs.offer}, Description: {jobs.description}, Zipcode: {jobs.zip} <button onClick={(event) => jobsList.handleTakeJob(event, jobs.id)}>Take Job</button></li>
+            return <li key={index}>
+              <li><h3>Job Name: {jobs.job_name}</h3></li>
+            <li><h3>Offer: ${jobs.offer}</h3></li>
+          <li><h3>Description: {jobs.description}</h3></li>
+        <li><h3>Zipcode: {jobs.zip}</h3></li> <button className="sJobs" onClick={(event) => jobsList.handleTakeJob(event, jobs.id)}>Take Job</button></li>
           })}
         </ul>
       </div>

@@ -53,10 +53,10 @@ class JobsListed extends Component {
 
     return (
       <div className="jobs-listed-wrapper">
-        <button onClick={(event) => this.handleJobsListed(event)}>View Jobs Listed</button>
-        <ul>
+        <button className="jListed" onClick={(event) => this.handleJobsListed(event)}>My Posts</button>
+        <ul className="jobsListed">
           {jobs.map(function(jobs, index){
-            return <li key={index}>Job Name: {jobs.job_name}, Offer: ${jobs.offer}, Description: {jobs.description} <button onClick={(event) => jobsList.handleRemoveJob(event, jobs.id)}>Remove Job</button> <button onClick={(event) => jobsList.handleEditJob(event, jobs.id)}>Edit Job</button></li>
+            return <h2><li key={index}><li>Job Name: {jobs.job_name}</li> <li>Offer: ${jobs.offer}</li> <li>Description: {jobs.description}</li> <button className="jListed" onClick={(event) => jobsList.handleRemoveJob(event, jobs.id)}>Remove Job</button> <button className="jListed" onClick={(event) => jobsList.handleEditJob(event, jobs.id)}>Edit Job</button></li></h2>
           })}
         </ul>
         <div>{!jobs ? "" : this.state.message}</div>
