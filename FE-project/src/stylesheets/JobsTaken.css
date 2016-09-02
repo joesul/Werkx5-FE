@@ -1,0 +1,30 @@
+.jobs-taken-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.jTaken {
+	background-color:transparent;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #7FB832;
+	display:inline-block;
+	cursor:pointer;
+	color:#7FB832;
+	font-family:Trebuchet MS;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.jTaken:hover {
+	background-color:transparent;
+}
+.jTaken:active {
+	position:relative;
+	top:1px;
+}
+.tList{
+  font-family: 'Nova Round'
+}

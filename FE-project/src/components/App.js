@@ -14,9 +14,9 @@ class App extends Component {
          <h1 className="font-effect-wallpaper">WERKX5</h1>
           <Image />
           <div className="navi">
-           <Link to="/" className="home"><h3 className="font-effect-wallpaper">Home</h3></Link><br/>
-           <Link to="/signup"><h3 className="font-effect-wallpaper">Sign Up</h3></Link>
-           <Link to="/login"><h3 className="font-effect-wallpaper">Log In</h3></Link>
+           <Link to="/" className="home"><h2 className="font-effect-wallpaper">Home</h2></Link><br/>
+           <Link to="/signup"><h2 className="font-effect-wallpaper">Sign Up</h2></Link>
+           <Link to="/login"><h2 className="font-effect-wallpaper">Log In</h2></Link>
           </div>
         </header>
        <div>

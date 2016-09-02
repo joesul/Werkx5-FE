@@ -55,13 +55,16 @@ class EditJob extends Component {
     return (
       <div className="edit-jobs-wrapper">
         <form onSubmit={(event) => this.editJob(event)}>
-          Edit Job<br/>
-          Job Name: <input placeholder={job.state.job_name} onChange={(event) => this.setState({job_name: event.target.value})}/><br/>
-          Offer: <input placeholder={job.state.offer} onChange={(event) => this.setState({offer: event.target.value})}/><br/>
-          Zip Code: <input placeholder={job.state.zip} onChange={(event) => this.setState({zip: event.target.value})}/><br/>
-          Description: <textarea placeholder={job.state.description} onChange={(event) => this.setState({description: event.target.value})}/><br/>
-        <button type="submit">Edit</button><br/>
+          <ul>
+          <h2>Edit Job</h2>
+          <h3>Job Name: <li><input placeholder={job.state.job_name} onChange={(event) => this.setState({job_name: event.target.value})}/></li></h3>
+          <h3>Offer: <li><input placeholder={job.state.offer} onChange={(event) => this.setState({offer: event.target.value})}/></li></h3>
+          <h3>Zip Code: <li><input placeholder={job.state.zip} onChange={(event) => this.setState({zip: event.target.value})}/></li></h3>
+          <h3>Description: <li><textarea className="editBox" placeholder={job.state.description} onChange={(event) => this.setState({description: event.target.value})}/></li></h3>
+        <button className="jTaken" type="submit">Edit</button>
+        </ul>
         <div>{this.state.message}</div>
+
         </form>
       </div>
     );
